@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <title>Secret</title>
+    <link rel="stylesheet" href="musik.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="info.html">Infos</a></li>
+                <li><a href="musik.html">Secret</a></li>
+            </ul>
+        </div>
+        <div class="left-col">
+            <h1>LISTEN<br>TO<br>THE<br>MUSIC</h1>
+        </div>
+        <div class="right-col">
+            <p>Click Here To Listen</p>
+            <img src="images/play.png" id="icon">
+        </div>
+    </div>
+
+    <audio id="mySong">
+        <source src="music/music.mp3" type="audio/mp3">   
+    </audio>
+
+    <script>
+        var mySong = document.getElementById("mySong");
+        var icon = document.getElementById("icon");
+
+        icon.onclick = function(){
+            if(mySong.paused){
+                mySong.play();
+                icon.src = "images/pause.png"
+            }else{
+                mySong.pause();
+                icon.src = "images/play.png"    
+            }   
+        }
+
+
+    </script>
+
+</body>
+
+</html>
